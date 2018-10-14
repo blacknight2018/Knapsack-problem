@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <windows.h>
 
 /*
 [背包问题]有一个背包，背包容量是M=150。有7个物品，物品可以分割成任意大小。
@@ -52,8 +52,6 @@ int print(int *m, int j, int total,int *k,int p)
 					if (value > maxValue)
 					{
 						maxValue = value;
-						//_asm int 21;
-
 					}
 				printf("TotalValue:%d\n",value);
 			}
@@ -70,5 +68,6 @@ int main()
 {
 	int k[100] = { 0 };//记录的是值 
 	print(m, 0, 0, k, 0);
+	printf("%d", maxValue);
     return 0;
 }
